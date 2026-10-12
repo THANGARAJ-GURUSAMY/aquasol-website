@@ -1,0 +1,1451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071b24">
+  <meta name="description" content="Explore AquaSol, our sustainability project, completed activities, photographs, video and team journey.">
+  <title>AquaSol | Every Drop Has a Future</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #071b24;
+      --surface: #0d2832;
+      --surface-light: #123440;
+      --aqua: #52e6d2;
+      --green: #c2f58a;
+      --white: #f5fcfa;
+      --muted: #a2bdc3;
+      --border: rgba(220,255,250,.12);
+      --max: 1160px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .logo {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img, video {
+      display: block;
+      width: 100%;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(var(--max), 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-alt {
+      background: #0a222c;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--aqua);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 17px;
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 5vw, 3.7rem);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .section-title span {
+      color: var(--aqua);
+    }
+
+    .section-desc {
+      max-width: 670px;
+      color: var(--muted);
+    }
+
+    .section-head {
+      margin-bottom: 42px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 21px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-size: .9rem;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: var(--aqua);
+      color: var(--bg);
+    }
+
+    .btn-primary:hover {
+      background: #91f5e9;
+      box-shadow: 0 10px 30px #52e6d229;
+    }
+
+    .btn-outline {
+      border-color: var(--border);
+      background: #ffffff08;
+    }
+
+    .btn-outline:hover {
+      background: #ffffff14;
+    }
+
+    /* Navigation */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #071b24ed;
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: var(--aqua);
+    }
+
+    .logo-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      margin-right: 7px;
+      border-radius: 12px;
+      background: var(--aqua);
+      color: var(--bg);
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .86rem;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--aqua);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+      padding: 7px 12px;
+      font-size: 1.35rem;
+      color: white;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 90px 0 85px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 80% 25%, #52e6d21c, transparent 40%),
+        radial-gradient(ellipse at 10% 90%, #24516b35, transparent 40%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px;
+      border-radius: 50px;
+      border: 1px solid #52e6d240;
+      background: #52e6d20d;
+      color: #b8fff5;
+      font-size: .74rem;
+      font-weight: 700;
+    }
+
+    .hero-badge i {
+      width: 7px;
+      height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.3rem, 6.2vw, 5.8rem);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin: 27px 0;
+    }
+
+    .hero h1 span {
+      display: block;
+      background: linear-gradient(100deg, var(--aqua), var(--green));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text {
+      max-width: 530px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      padding: 9px;
+      border: 1px solid #52e6d233;
+      background: #ffffff07;
+      border-radius: 27px;
+      transform: rotate(1deg);
+    }
+
+    .hero-image {
+      height: 460px;
+      border-radius: 20px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 9px;
+      border-radius: 20px;
+      background: linear-gradient(transparent 45%, #03141cdd);
+      pointer-events: none;
+    }
+
+    .hero-caption {
+      position: absolute;
+      bottom: 26px;
+      left: 28px;
+      right: 28px;
+    }
+
+    .hero-caption small {
+      color: #b8d9db;
+    }
+
+    .hero-caption h3 {
+      font-size: 1.35rem;
+    }
+
+    .hero-float {
+      position: absolute;
+      top: 35px;
+      right: -15px;
+      background: var(--white);
+      color: var(--bg);
+      padding: 14px 18px;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px #0004;
+    }
+
+    .hero-float small {
+      display: block;
+      color: #59727a;
+      font-size: .7rem;
+    }
+
+    .hero-float strong {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* About cards */
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: linear-gradient(145deg, #ffffff09, #ffffff02);
+      overflow: hidden;
+      transition: transform .3s, border-color .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #52e6d255;
+    }
+
+    .feature-card {
+      padding: 28px;
+    }
+
+    .feature-icon {
+      width: 53px;
+      height: 53px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #52e6d218;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Activities */
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .activity-image {
+      height: 235px;
+    }
+
+    .activity-body {
+      padding: 23px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 50px;
+      background: #52e6d215;
+      color: var(--aqua);
+      font-size: .7rem;
+      font-weight: 700;
+      margin-bottom: 13px;
+    }
+
+    .activity-body h3 {
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin-bottom: 11px;
+    }
+
+    .activity-body p {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .activity-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+    }
+
+    .activity-footer small {
+      color: var(--muted);
+    }
+
+    .activity-footer a {
+      color: var(--aqua);
+      font-weight: 700;
+    }
+
+    /* Timeline */
+
+    .timeline {
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 11px;
+      width: 2px;
+      background: linear-gradient(var(--aqua), #52e6d220);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 45px;
+      padding-bottom: 27px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      width: 18px;
+      height: 18px;
+      border: 4px solid var(--aqua);
+      background: var(--bg);
+      border-radius: 50%;
+    }
+
+    .timeline-card {
+      padding: 23px;
+    }
+
+    .timeline-card small {
+      color: var(--aqua);
+      font-weight: 700;
+    }
+
+    .timeline-card h3 {
+      margin: 7px 0;
+      font-size: 1.2rem;
+    }
+
+    .timeline-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Ten-photo gallery */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 170px;
+      gap: 14px;
+    }
+
+    .gallery-item {
+      position: relative;
+      grid-column: span 4;
+      grid-row: span 2;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: var(--surface);
+      text-align: left;
+      color: white;
+      cursor: zoom-in;
+    }
+
+    .gallery-item.wide {
+      grid-column: span 8;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      transition: transform .45s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 35%, #03131ce8);
+      pointer-events: none;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      z-index: 1;
+      left: 17px;
+      right: 12px;
+      bottom: 15px;
+    }
+
+    .gallery-caption small {
+      display: block;
+      color: var(--aqua);
+      font-size: .7rem;
+    }
+
+    .gallery-caption strong {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+    }
+
+    .zoom-icon {
+      position: absolute;
+      z-index: 2;
+      right: 12px;
+      top: 12px;
+      width: 35px;
+      height: 35px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #071b24c9;
+      border: 1px solid #ffffff25;
+    }
+
+    /* Single video */
+
+    .video-layout {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 38px;
+    }
+
+    .video-box {
+      padding: 12px;
+    }
+
+    .video-box video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #02090d;
+      border-radius: 14px;
+    }
+
+    .video-details {
+      padding: 10px;
+    }
+
+    .video-details h3 {
+      font-size: 1.8rem;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .video-details p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .video-label {
+      color: var(--aqua);
+      font-size: .74rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* Team */
+
+    .team-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      padding: 32px;
+    }
+
+    .team-photo {
+      height: 360px;
+      border-radius: 15px;
+    }
+
+    .team-panel h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .team-panel p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .team-note {
+      display: inline-block;
+      padding: 9px 13px;
+      border: 1px solid #52e6d23b;
+      background: #52e6d20d;
+      border-radius: 10px;
+      color: var(--aqua);
+      font-size: .8rem;
+    }
+
+    /* CTA */
+
+    .cta-panel {
+      padding: 58px 35px;
+      text-align: center;
+      border: 1px solid #52e6d235;
+      border-radius: 27px;
+      background:
+        radial-gradient(ellipse at 50% 0%, #52e6d21b, transparent 60%),
+        linear-gradient(135deg, #103540, #0b2631);
+    }
+
+    .cta-panel h2 {
+      font-size: clamp(2.2rem, 5vw, 3.7rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .cta-panel h2 span {
+      color: var(--aqua);
+    }
+
+    .cta-panel p {
+      max-width: 650px;
+      color: var(--muted);
+      margin: 0 auto 26px;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: #05151d;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+      padding: 50px 0 35px;
+    }
+
+    .footer-main p {
+      max-width: 340px;
+      color: var(--muted);
+      font-size: .86rem;
+      margin-top: 14px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 12px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: var(--muted);
+      font-size: .86rem;
+      margin: 8px 0;
+    }
+
+    .footer-column a:hover {
+      color: var(--aqua);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .footer-bottom p {
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .footer-bottom a {
+      color: var(--aqua);
+      font-size: .85rem;
+    }
+
+    /* Photo lightbox */
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      display: none;
+      place-items: center;
+      padding: 24px;
+      background: #01090df2;
+      backdrop-filter: blur(12px);
+    }
+
+    .lightbox.open {
+      display: grid;
+    }
+
+    .lightbox-content {
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .lightbox img {
+      width: auto;
+      max-width: 100%;
+      max-height: 80vh;
+      margin: auto;
+      border-radius: 12px;
+    }
+
+    .lightbox-caption {
+      color: var(--muted);
+      margin-top: 13px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      right: 23px;
+      top: 18px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #ffffff40;
+      border-radius: 50%;
+      background: #ffffff15;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    /* Scroll animations */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 13px; }
+      .nav-links a { font-size: .8rem; }
+      .hero-grid { gap: 30px; }
+      .hero-image { height: 380px; }
+      .video-layout { grid-template-columns: 1fr; }
+      .video-details { padding: 10px 4px; }
+      .gallery-grid { grid-auto-rows: 145px; }
+      .section { padding: 80px 0; }
+    }
+
+    @media (max-width: 700px) {
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        padding: 16px 5% 23px;
+        background: #071b24fc;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open { display: flex; }
+
+      .nav-links a {
+        padding: 11px 0;
+        border-bottom: 1px solid #ffffff0c;
+      }
+
+      .hero { padding-top: 60px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: clamp(3.3rem, 12vw, 5rem); }
+      .hero-image { height: 350px; }
+      .hero-visual { margin-top: 15px; }
+      .feature-grid, .activity-grid { grid-template-columns: repeat(2, 1fr); }
+      .team-panel { grid-template-columns: 1fr; }
+      .team-photo { height: 300px; }
+      .gallery-grid { grid-template-columns: repeat(6, 1fr); }
+      .gallery-item { grid-column: span 3; }
+      .gallery-item.wide { grid-column: span 6; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .footer-about { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 480px) {
+      .container { width: 91%; }
+      .section { padding: 68px 0; }
+      .hero h1 { letter-spacing: -2px; }
+      .hero-image { height: 290px; }
+      .hero-float { right: -5px; }
+      .feature-grid, .activity-grid { grid-template-columns: 1fr; }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 175px;
+      }
+      .gallery-item, .gallery-item.wide { grid-column: span 1; }
+      .gallery-item.wide { grid-column: span 2; }
+      .team-panel { padding: 18px; }
+      .team-photo { height: 240px; }
+      .cta-panel { padding: 38px 20px; }
+      .footer-main { gap: 24px 14px; }
+      .timeline-item { padding-left: 37px; }
+      .timeline::before { left: 8px; }
+      .timeline-dot { left: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">
+        <span class="logo-mark">≈</span>Aqua<span>Sol</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#activities">Activities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#videos">Video</a>
+        <a href="#team">Team</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="hero-badge">
+            <i></i> WATER · SUSTAINABILITY · INNOVATION
+          </div>
+
+          <h1>Every drop.<span>A new future.</span></h1>
+
+          <p class="hero-text">
+            Welcome to AquaSol, our journey towards sustainable water
+            management. Explore the activities our team has completed,
+            the work we have documented, and the people behind our project.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#activities">Explore Our Work ↗</a>
+            <a class="btn btn-outline" href="#gallery">View Our Gallery</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image-wrap">
+            <img class="hero-image" src="assets/image-1.jpg"
+              alt="AquaSol project photograph">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-caption">
+              <small>THE AQUASOL PROJECT</small>
+              <h3>Our journey towards a better future.</h3>
+            </div>
+          </div>
+
+          <div class="hero-float">
+            <small>OUR SHARED GOAL</small>
+            <strong>Every Drop Matters.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">01 — About us</span>
+          <h2 class="section-title">An idea with a <span>purpose.</span></h2>
+          <p class="section-desc">
+            AquaSol showcases our team's efforts, practical activities,
+            learning, and project progress related to water sustainability.
+            This website documents our real work and our journey together.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="card feature-card reveal">
+            <div class="feature-icon">💧</div>
+            <h3>Understand the Challenge</h3>
+            <p>Explore the water-related problem that inspired our project
+              and the goals our team aims to address.</p>
+          </article>
+
+          <article class="card feature-card reveal">
+            <div class="feature-icon">⚙️</div>
+            <h3>Turn Ideas into Action</h3>
+            <p>Discover our practical activities, project implementation,
+              teamwork, and the methods we have actually used.</p>
+          </article>
+
+          <article class="card feature-card reveal">
+            <div class="feature-icon">🌱</div>
+            <h3>Build Awareness</h3>
+            <p>Share our learning and encourage responsible resource use
+              through project documentation and awareness.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="section section-alt" id="activities">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">02 — Our activities</span>
+          <h2 class="section-title">Ideas into <span>action.</span></h2>
+          <p class="section-desc">
+            A selection of our activities, practical work, and progress.
+            Replace the example descriptions with the actual work completed
+            by your AquaSol team.
+          </p>
+        </div>
+
+        <div class="activity-grid">
+          <article class="card reveal">
+            <img class="activity-image" src="assets/image-2.jpg"
+              alt="AquaSol activity one">
+
+            <div class="activity-body">
+              <span class="tag">ACTIVITY 01</span>
+              <h3>Planning and Preparation</h3>
+              <p>Describe the research, preparation, and planning your team
+                completed before beginning the project activities.</p>
+              <div class="activity-footer">
+                <small>Our first steps</small>
+                <a href="#gallery">View photos ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <img class="activity-image" src="assets/image-3.jpg"
+              alt="AquaSol activity two">
+
+            <div class="activity-body">
+              <span class="tag">ACTIVITY 02</span>
+              <h3>Practical Implementation</h3>
+              <p>Explain the real activity carried out by your team,
+                including the methods, materials, and teamwork involved.</p>
+              <div class="activity-footer">
+                <small>Hands-on work</small>
+                <a href="#gallery">View photos ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <img class="activity-image" src="assets/image-4.jpg"
+              alt="AquaSol activity three">
+
+            <div class="activity-body">
+              <span class="tag">ACTIVITY 03</span>
+              <h3>Results and Learning</h3>
+              <p>Document your completed work, observations, lessons
+                learned, and the improvements you plan to make.</p>
+              <div class="activity-footer">
+                <small>Our progress</small>
+                <a href="#videos">Watch video ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">03 — Our journey</span>
+          <h2 class="section-title">Every step tells <span>a story.</span></h2>
+          <p class="section-desc">
+            Organize your project milestones chronologically. Update
+            these descriptions and add your real completion dates.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="card timeline-card">
+              <small>PHASE 01 · ADD YOUR DATE</small>
+              <h3>Idea and Problem Identification</h3>
+              <p>Explain how your team identified the problem and decided
+                on the objectives of AquaSol.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="card timeline-card">
+              <small>PHASE 02 · ADD YOUR DATE</small>
+              <h3>Planning and Preparation</h3>
+              <p>Describe your research, resources, planning, and
+                preparation before implementation.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="card timeline-card">
+              <small>PHASE 03 · ADD YOUR DATE</small>
+              <h3>Completed Activities</h3>
+              <p>Record the activities your team carried out and
+                include the relevant photographs.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="card timeline-card">
+              <small>PHASE 04 · ADD YOUR DATE</small>
+              <h3>Results and Next Steps</h3>
+              <p>Summarize verified observations, lessons learned,
+                and future improvements.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY: ALL 10 PHOTOS -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">04 — Photo gallery</span>
+          <h2 class="section-title">AquaSol, <span>through our lens.</span></h2>
+          <p class="section-desc">
+            Ten photographs capturing our project journey, activities,
+            teamwork, and progress. Click any photograph to view it larger.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <button class="gallery-item wide reveal"
+            data-photo="assets/image-1.jpg" data-caption="AquaSol Project Overview">
+            <img src="assets/image-1.jpg" alt="AquaSol photograph one" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 01</small><strong>Project Overview</strong></span>
+          </button>
+
+          <button class="gallery-item reveal"
+            data-photo="assets/image-2.jpg" data-caption="Project Planning">
+            <img src="assets/image-2.jpg" alt="AquaSol photograph two" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 02</small><strong>Planning</strong></span>
+          </button>
+
+          <button class="gallery-item reveal"
+            data-photo="assets/image-3.jpg" data-caption="Practical Activities">
+            <img src="assets/image-3.jpg" alt="AquaSol photograph three" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 03</small><strong>Activities</strong></span>
+          </button>
+
+          <button class="gallery-item reveal"
+            data-photo="assets/image-4.jpg" data-caption="Project Progress">
+            <img src="assets/image-4.jpg" alt="AquaSol photograph four" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 04</small><strong>Progress</strong></span>
+          </button>
+
+          <button class="gallery-item wide reveal"
+            data-photo="assets/image-5.jpg" data-caption="Project Work">
+            <img src="assets/image-5.jpg" alt="AquaSol photograph five" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 05</small><strong>Project Work</strong></span>
+          </button>
+
+          <button class="gallery-item reveal"
+            data-photo="assets/image-6.jpg" data-caption="Project Documentation">
+            <img src="assets/image-6.jpg" alt="AquaSol photograph six" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 06</small><strong>Documentation</strong></span>
+          </button>
+
+          <button class="gallery-item reveal"
+            data-photo="assets/image-7.jpg" data-caption="Team Collaboration">
+            <img src="assets/image-7.jpg" alt="AquaSol photograph seven" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 07</small><strong>Collaboration</strong></span>
+          </button>
+
+          <button class="gallery-item reveal"
+            data-photo="assets/image-8.jpg" data-caption="Project Demonstration">
+            <img src="assets/image-8.jpg" alt="AquaSol photograph eight" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 08</small><strong>Demonstration</strong></span>
+          </button>
+
+          <button class="gallery-item reveal"
+            data-photo="assets/image-9.jpg" data-caption="Project Results">
+            <img src="assets/image-9.jpg" alt="AquaSol photograph nine" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 09</small><strong>Results</strong></span>
+          </button>
+
+          <button class="gallery-item wide reveal"
+            data-photo="assets/image-10.jpg" data-caption="AquaSol Team and Project Memories">
+            <img src="assets/image-10.jpg" alt="AquaSol photograph ten" loading="lazy">
+            <span class="zoom-icon">↗</span>
+            <span class="gallery-caption"><small>PHOTO 10</small><strong>Our Memories</strong></span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ONE VIDEO ONLY -->
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">05 — Video showcase</span>
+          <h2 class="section-title">Watch AquaSol <span>in action.</span></h2>
+          <p class="section-desc">
+            One video showcasing your project demonstration, team activities,
+            fieldwork, or presentation.
+          </p>
+        </div>
+
+        <div class="video-layout">
+          <div class="card video-box reveal">
+            <video controls preload="metadata" poster="assets/image-4.jpg">
+              <source src="assets/video-1.mp4" type="video/mp4">
+              Your browser does not support this video.
+            </video>
+          </div>
+
+          <div class="video-details reveal">
+            <span class="video-label">AQUASOL · PROJECT FILM</span>
+            <h3>Our journey, captured in motion.</h3>
+            <p>
+              Watch our actual project activities, the work completed
+              by our team, and the experience behind AquaSol.
+              Replace this description with the exact content of your video.
+            </p>
+            <a class="btn btn-outline" href="#team">Meet Our Team ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section section-alt" id="team">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">06 — People behind the project</span>
+          <h2 class="section-title">Together, we are <span>AquaSol.</span></h2>
+          <p class="section-desc">
+            Our project is built through teamwork, shared learning,
+            and a common interest in sustainable water management.
+          </p>
+        </div>
+
+        <div class="card team-panel reveal">
+          <img class="team-photo" src="assets/image-10.jpg"
+            alt="AquaSol team photograph" loading="lazy">
+
+          <div>
+            <span class="eyebrow">OUR TEAM</span>
+            <h3>Different skills. One shared vision.</h3>
+            <p>
+              Meet the people who contributed to our project activities,
+              practical work, documentation, and project development.
+              Add your team members' names and roles to this section.
+            </p>
+            <div class="team-note">
+              Replace this photograph if image 10 is not your team photo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <span class="eyebrow">Our vision for tomorrow</span>
+          <h2>Better choices today.<br><span>A better future tomorrow.</span></h2>
+          <p>
+            AquaSol is our journey of learning, practical action,
+            and environmental responsibility. Explore our photographs,
+            watch our work, and discover our progress.
+          </p>
+          <a href="#gallery" class="btn btn-primary">Explore Our Journey ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-main">
+      <div>
+        <a class="logo" href="#home">
+          <span class="logo-mark">≈</span>Aqua<span>Sol</span>
+        </a>
+        <p>
+          A project portfolio documenting our team's activities,
+          learning, collaboration, and journey towards sustainability.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="#about">About AquaSol</a>
+        <a href="#activities">Activities</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#gallery">Photo Gallery</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Discover</h4>
+        <a href="#videos">Project Video</a>
+        <a href="#team">Our Team</a>
+        <a href="#home">Home</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> AquaSol Project. All rights reserved.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- IMAGE LIGHTBOX -->
+  <div class="lightbox" id="lightbox"
+    role="dialog" aria-modal="true" aria-label="Expanded project image">
+
+    <button class="lightbox-close" id="lightboxClose"
+      aria-label="Close image">×</button>
+
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script>
+    // Update footer year
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+
+      menuToggle.textContent = isOpen ? '×' : '☰';
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation' : 'Open navigation'
+      );
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.textContent = '☰';
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Reveal animations
+    const revealItems = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(item => revealObserver.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('visible'));
+    }
+
+    // Gallery lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    let lastFocusedElement = null;
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        lastFocusedElement = item;
+
+        const photo = item.querySelector('img');
+
+        lightboxImage.src = item.dataset.photo;
+        lightboxImage.alt = photo.alt;
+        lightboxCaption.textContent = item.dataset.caption || photo.alt;
+
+        lightbox.classList.add('open');
+        lightboxClose.focus();
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightboxImage.src = '';
+
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', event => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (
+        event.key === 'Escape' &&
+        lightbox.classList.contains('open')
+      ) {
+        closeLightbox();
+      }
+    });
+
+    // Active navigation highlighting
+    const sections = document.querySelectorAll('main section[id]');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    if ('IntersectionObserver' in window) {
+      const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navItems.forEach(link => {
+              link.classList.toggle(
+                'active',
+                link.getAttribute('href') === '#' + entry.target.id
+              );
+            });
+          }
+        });
+      }, { rootMargin: '-25% 0px -65% 0px' });
+
+      sections.forEach(section => sectionObserver.observe(section));
+    }
+  </script>
+
+</body>
+</html>
